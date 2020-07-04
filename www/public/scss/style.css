@@ -1,0 +1,255 @@
+body {
+  background-color: #fbfbfb;
+  height: 100vh;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  color: #333;
+}
+
+.nama-input-field {
+  width: 200px;
+  border: none;
+  border-bottom: 3px solid #45EC9C;
+  height: 40px;
+  transition-duration: 0.1s;
+}
+.nama-input-field:focus {
+  border: none;
+  background-color: #f3f3f3;
+}
+
+.nama-input-button {
+  width: 200px;
+  background-color: #45EC9C;
+  color: white;
+  border: none;
+  height: 40px;
+  cursor: pointer;
+  font-weight: bolder;
+}
+.nama-input-button:hover {
+  background-color: #38ad6a;
+}
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+#login-form #login-form-container {
+  width: 300px;
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 40px 30px 0 30px;
+}
+#login-form #login-form-container #login-form-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#login-form #login-form-container #login-form-logo img {
+  width: 200px;
+}
+#login-form #login-form-container #login-form-fields * {
+  display: block;
+  width: 100%;
+}
+#login-form #login-form-container #login-form-fields .nama-input-field {
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+#login-form #login-form-container #login-form-fields .nama-input-button {
+  margin-top: 70px;
+  width: calc(100% + 60px);
+  position: relative;
+  left: -30px;
+  height: 50px;
+}
+#login-form hr {
+  margin: 50px 0;
+  opacity: 0.5;
+}
+#login-form #login-form-forgot {
+  margin-top: 20px;
+  color: grey;
+  font-size: 0.8rem;
+}
+#login-form #login-form-forgot:hover {
+  color: black;
+}
+
+#aut-header {
+  height: 80px;
+  width: 100%;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#aut-header #aut-header-container {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  #aut-header #aut-header-container {
+    width: 90%;
+  }
+}
+#aut-header #aut-header-container #aut-header-logo img {
+  height: 60px;
+}
+#aut-header #aut-header-container #aut-header-data {
+  font-size: 0.8rem;
+  color: #aaa;
+}
+@media screen and (max-width: 768px) {
+  #aut-header #aut-header-container #aut-header-data {
+    text-align: right;
+    max-width: 50%;
+  }
+}
+#aut-header #aut-header-container #aut-header-data a {
+  color: #4B31BA;
+  text-decoration: none;
+}
+#aut-header #aut-header-container #aut-header-data a:hover {
+  color: #3c216e;
+  text-decoration: underline;
+}
+
+#main-content {
+  width: 80%;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+  #main-content {
+    width: 90%;
+  }
+}
+
+#insert-record {
+  background-color: white;
+  padding: 40px;
+  margin: 50px 0;
+  border: 1px solid #ddd;
+}
+#insert-record form {
+  width: 100%;
+  display: flex;
+}
+@media screen and (max-width: 1080px) {
+  #insert-record form {
+    flex-direction: column;
+  }
+}
+#insert-record form > * {
+  flex-grow: 1;
+}
+#insert-record form .nama-input-field {
+  margin-right: 50px;
+  background: none;
+}
+@media screen and (max-width: 1080px) {
+  #insert-record form .nama-input-field {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 1080px) {
+  #insert-record form .nama-input-button {
+    width: 100%;
+  }
+}
+
+#records {
+  margin: 50px 0;
+  overflow: hidden;
+}
+@media screen and (max-width: 1080px) {
+  #records {
+    overflow-x: scroll;
+  }
+}
+#records table {
+  width: 100%;
+  font-size: 0.9rem;
+  min-width: 800px;
+}
+#records table thead {
+  margin: 0;
+}
+#records table thead tr {
+  border-bottom: 1px solid #ddd;
+}
+#records table tbody * {
+  font-weight: lighter;
+}
+#records table tr {
+  display: flex;
+  width: 100%;
+}
+#records table tr:nth-child(even) {
+  background-color: #eee;
+}
+#records table tr th {
+  width: 20%;
+  text-align: left;
+  padding: 20px 10px;
+}
+#records .expand-icon {
+  font-size: 1.2rem;
+  position: relative;
+  top: 4px;
+  text-decoration: none;
+  color: #333;
+}
+#records .expand-icon:hover {
+  color: #4B31BA;
+}
+#records .expand-less {
+  left: -5px;
+}
+#records .delete-icon {
+  cursor: pointer;
+  font-size: 1.2rem;
+  line-height: 0.7rem;
+}
+#records .delete-icon:hover {
+  color: #4B31BA;
+}
+#records #pagination {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+#records #pagination a {
+  background-color: #ddd;
+  font-size: 0.8rem;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bolder;
+}
+#records #pagination a:hover {
+  background-color: #45EC9C;
+  color: white;
+}
+
+footer {
+  background-color: #eee;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 0.8rem;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,255 @@
+//variables
+
+$primary : #45EC9C;
+$primaryFocus : #38ad6a;
+$secondary : #4B31BA;
+$secondaryFocus : #3c216e;
+
+//body
+body {
+  background-color: #fbfbfb;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+}
+
+
+//general
+.nama-input-field {
+  width: 200px;
+  border: none;
+  border-bottom: 3px solid $primary;
+  height: 40px;
+  transition-duration: 0.1s;
+  &:focus {
+    border: none;
+    background-color: #f3f3f3;
+  }
+}
+
+.nama-input-button {
+  width: 200px;
+  background-color: $primary;
+  color:white;
+  border: none;
+  height: 40px;
+  cursor: pointer;
+  font-weight: bolder;
+  &:hover {
+    background-color: $primaryFocus;
+  }
+
+}
+
+//login
+#login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  #login-form-container {
+    width: 300px;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 40px 30px 0 30px;
+      #login-form-logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 200px;
+        }
+      }
+    #login-form-fields * {
+      display: block;
+      width: 100%;
+
+    }
+    #login-form-fields {
+      .nama-input-field {
+        margin-bottom: 20px;
+        margin-top: 10px;
+      }
+       .nama-input-button {
+         margin-top: 70px;
+         width: calc(100% + 60px);
+         position: relative;
+         left: -30px;
+         height: 50px;
+       }
+     }
+  }
+  hr {
+    margin: 50px 0;
+    opacity: 0.5;
+  }
+  #login-form-forgot {
+    margin-top: 20px;
+    color: grey;
+    font-size: 0.8rem;
+    &:hover {
+      color: black;
+    }
+  }
+}
+
+
+//aut-header
+#aut-header {
+  height: 80px;
+  width: 100%;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  #aut-header-container {
+    width: 80%;
+    @media screen and (max-width: 768px) {width: 90%;}
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    #aut-header-logo img {
+      height: 60px;
+    }
+    #aut-header-data {
+      font-size: 0.8rem;
+      color: #aaa;
+      @media screen and (max-width: 768px) {
+        text-align: right;
+        max-width: 50%;
+      }
+      a {
+        color: $secondary;
+        text-decoration: none;
+        &:hover {
+          color: $secondaryFocus;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+//aut-main
+#main-content {
+  width: 80%;
+  @media screen and (max-width: 768px) {width: 90%;}
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+//aut-records
+#insert-record {
+  background-color: white;
+  padding: 40px;
+  margin: 50px 0;
+  border: 1px solid #ddd;
+  form {
+    width: 100%;
+    display: flex;
+    @media screen and (max-width: 1080px){
+      flex-direction: column;
+    }
+    >* {
+      flex-grow: 1;
+    }
+    .nama-input-field {
+      margin-right: 50px;
+      background: none;
+      @media screen and (max-width: 1080px){
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+    @media screen and (max-width: 1080px) {
+      .nama-input-button {
+        width: 100%;
+      }
+    }
+  }
+}
+
+#records {
+  margin: 50px 0;
+  overflow: hidden;
+  @media screen and (max-width: 1080px) {
+    overflow-x: scroll;
+  }
+  table {
+    width: 100%;
+    font-size: 0.9rem;
+    min-width: 800px;
+    thead {
+      margin: 0;
+      tr {border-bottom: 1px solid #ddd;}
+    }
+    tbody *{
+      font-weight: lighter;
+    }
+    tr {
+      display: flex;
+      width: 100%;
+      &:nth-child(even) {
+        background-color: #eee;
+      }
+      th {
+        width: 20%;
+        text-align: left;
+        padding: 20px 10px;
+      }
+    }
+  }
+  .expand-icon {
+    font-size: 1.2rem;
+    position: relative;
+    top: 4px;
+    text-decoration: none;
+    color: #333;
+    &:hover {
+      color: $secondary;
+    }
+  }
+  .expand-less {
+    left: -5px;
+  }
+  .delete-icon {
+    cursor: pointer;
+    font-size: 1.2rem;
+    line-height: 0.7rem;
+    &:hover {
+      color: $secondary;
+    }
+  }
+  #pagination {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    a {
+      background-color: #ddd;
+      font-size: 0.8rem;
+      padding: 10px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bolder;
+      &:hover {
+        background-color: $primary;
+        color: white;
+      }
+    }
+  }
+}
+
+//footer
+footer {
+  background-color: #eee;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 0.8rem;
+}
